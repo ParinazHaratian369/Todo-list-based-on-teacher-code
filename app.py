@@ -24,4 +24,7 @@ window.resizable(False, False)
 frame = CTkFrame(window)
 frame.pack(padx=20, pady=20, fill="x")
 
+entry_frame = CTkFrame(frame)
+entry_frame.pack(pady=10, fill="x")
+
 window.mainloop()
