@@ -12,3 +12,10 @@ def load_tasks():
 
 path = "tasks.json"
 tasks = load_tasks()
+
+window = CTk()
+window.title("Todo List App")
+window.geometry("700x500")
+window.resizable(False, False)
+
+window.mainloop()
