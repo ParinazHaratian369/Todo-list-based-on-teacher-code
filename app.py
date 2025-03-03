@@ -21,4 +21,7 @@ window.title("Todo List App")
 window.geometry("700x500")
 window.resizable(False, False)
 
+frame = CTkFrame(window)
+frame.pack(padx=20, pady=20, fill="x")
+
 window.mainloop()
