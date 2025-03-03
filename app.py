@@ -13,6 +13,9 @@ def load_tasks():
 path = "tasks.json"
 tasks = load_tasks()
 
+set_appearance_mode("light")
+set_default_color_theme("themes/rime.json")
+
 window = CTk()
 window.title("Todo List App")
 window.geometry("700x500")
