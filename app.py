@@ -27,4 +27,10 @@ frame.pack(padx=20, pady=20, fill="x")
 entry_frame = CTkFrame(frame)
 entry_frame.pack(pady=10, fill="x")
 
+task_entry = CTkEntry(entry_frame, width=500)
+task_entry.pack(side="left")
+
+add_button = CTkButton(entry_frame, text="Add", width=100)
+add_button.pack(side="right")
+
 window.mainloop()
