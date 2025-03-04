@@ -1,1 +1,10 @@
-{}
+[
+    {
+        "text": "read a book",
+        "status": "default"
+    },
+    {
+        "text": "find a solution",
+        "status": "default"
+    }
+]

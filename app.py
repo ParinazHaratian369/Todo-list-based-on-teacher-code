@@ -33,6 +33,9 @@ def add_task():
     update_task_list()
     task_entry.delete(0, END)
 
+def reset_task():
+    pass
+
 def mark_done():
     selected_index = task_listbox.curselection()[0]
     tasks[selected_index]["status"] = "done"
@@ -119,5 +122,8 @@ highlite_btn.grid(row=1, column=0, padx=5, pady=5)
 
 mark_done_btn = CTkButton(btn_frame, text="Mark Done", command=mark_done, width=200)
 mark_done_btn.grid(row=1, column=1, padx=5)
+
+reset_btn = CTkButton(btn_frame, text="Reset", command=reset_task, width=200)
+reset_btn.grid(row=1, column=2, padx=5, pady=5)
 
 window.mainloop()
