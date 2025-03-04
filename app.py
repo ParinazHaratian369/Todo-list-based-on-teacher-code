@@ -1,6 +1,6 @@
 from customtkinter import *
 import json
-from tkinter import Scrollbar
+from tkinter import Scrollbar, Listbox
 
 def load_tasks():
     try:
@@ -39,5 +39,8 @@ task_frame.pack(padx=10, pady=10, fill="both")
 
 task_scrollbar = Scrollbar(task_frame)
 task_scrollbar.pack(side="right", fill="y")
+
+task_listbox = Listbox(task_frame, yscrollcommand=task_scrollbar.set)
+task_listbox.pack(side=LEFT, fill=BOTH, expand=True)
 
 window.mainloop()
