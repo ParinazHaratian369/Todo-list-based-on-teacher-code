@@ -1,5 +1,6 @@
 from customtkinter import *
 import json
+from tkinter import Scrollbar
 
 def load_tasks():
     try:
@@ -35,5 +36,8 @@ add_button.pack(side="right")
 
 task_frame = CTkFrame(frame)
 task_frame.pack(padx=10, pady=10, fill="both")
+
+task_scrollbar = Scrollbar(task_frame)
+task_scrollbar.pack(side="right", fill="y")
 
 window.mainloop()
