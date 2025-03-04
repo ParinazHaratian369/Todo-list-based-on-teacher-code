@@ -8,6 +8,11 @@ def load_tasks():
                 return json.load(f)
         return []
 
+def save_tasks():
+    with open(database, "w") as f:
+        json.dump(tasks, f, indent=4)
+
+
 def update_task_list():
     task_listbox.delete(0, END)
     for task in tasks:
