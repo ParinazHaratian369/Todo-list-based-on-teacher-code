@@ -43,4 +43,6 @@ task_scrollbar.pack(side="right", fill="y")
 task_listbox = Listbox(task_frame, yscrollcommand=task_scrollbar.set)
 task_listbox.pack(side=LEFT, fill=BOTH, expand=True)
 
+task_scrollbar.configure(command=task_listbox.yview)
+
 window.mainloop()
