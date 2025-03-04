@@ -3,15 +3,14 @@ import json
 from tkinter import Scrollbar, Listbox
 
 def load_tasks():
-        if os.path.exists(database):
-            with open(database, "r") as f:
-                return json.load(f)
-        return []
+    if os.path.exists(database):
+        with open(database, "r") as f:
+            return json.load(f)
+    return []
 
 def save_tasks():
     with open(database, "w") as f:
         json.dump(tasks, f, indent=4)
-
 
 def update_task_list():
     task_listbox.delete(0, END)
@@ -26,6 +25,13 @@ def update_task_list():
         else:
             task_listbox.insert(END, task_text)
 
+def add_task():
+    task_text = task_entry.get()
+    print(type(tasks))
+    tasks.append({"text":task_text, "status":"default"})
+    save_tasks()
+    update_task_list()
+    task_entry.delete(0, END)
 
 database = "database.json"
 tasks = load_tasks()
