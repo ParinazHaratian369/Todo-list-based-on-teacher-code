@@ -34,7 +34,10 @@ def add_task():
     task_entry.delete(0, END)
 
 def clear_tasks():
-    pass
+    global tasks
+    tasks = []
+    save_tasks()
+    update_task_list()
 
 def remove_task():
     selected_index = task_listbox.curselection()[0]
