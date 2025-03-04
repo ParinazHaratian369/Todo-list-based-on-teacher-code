@@ -69,4 +69,7 @@ task_scrollbar.configure(command=task_listbox.yview)
 
 update_task_list()
 
+btn_frame = CTkFrame(frame)
+btn_frame.pack(pady=10)
+
 window.mainloop()
