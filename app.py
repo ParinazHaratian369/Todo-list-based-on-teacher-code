@@ -33,6 +33,9 @@ def add_task():
     update_task_list()
     task_entry.delete(0, END)
 
+def remove_task():
+    pass
+
 def edit_task():
     selected_index = task_listbox.curselection()[0]
     # print(selected_index)
@@ -83,5 +86,8 @@ btn_frame.pack(pady=10)
 
 edit_btn = CTkButton(btn_frame, text="Edit", command=edit_task, width=200)
 edit_btn.grid(row=0, column=0)
+
+remove_btn = CTkButton(btn_frame, text="Remove", command=remove_task, width=200)
+remove_btn.grid(row=0, column=1)
 
 window.mainloop()
