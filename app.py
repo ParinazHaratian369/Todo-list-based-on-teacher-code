@@ -33,4 +33,7 @@ task_entry.pack(side="left")
 add_button = CTkButton(entry_frame, text="Add", width=100)
 add_button.pack(side="right")
 
+task_frame = CTkFrame(frame)
+task_frame.pack(padx=10, pady=10, fill="both")
+
 window.mainloop()
