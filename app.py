@@ -9,7 +9,20 @@ def load_tasks():
     except:
         tasks = {}
         with open(path, "w") as f:
-            json.dump(tasks, f, indent=4) 
+            json.dump(tasks, f, indent=4)
+
+def update_task_list():
+    task_listbox.delete(0, END)
+    for task in tasks:
+        task_text = task["text"]
+        if task["status"] == "important":
+            task_listbox.insert(END, task_text)
+            task_listbox.itemconfig(END, {'bg' : 'orange'})
+        elif task["status"] == "done":
+            task_listbox.insert(END, task_text)
+            task_listbox.itemconfig(END, {'bg' : 'green'})
+        else:
+            task_listbox.insert(END, task_text)
 
 path = "tasks.json"
 tasks = load_tasks()
@@ -44,5 +57,7 @@ task_listbox = Listbox(task_frame, yscrollcommand=task_scrollbar.set)
 task_listbox.pack(side=LEFT, fill=BOTH, expand=True)
 
 task_scrollbar.configure(command=task_listbox.yview)
+
+update_task_list()
 
 window.mainloop()
