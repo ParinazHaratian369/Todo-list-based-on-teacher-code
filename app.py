@@ -33,6 +33,9 @@ def add_task():
     update_task_list()
     task_entry.delete(0, END)
 
+def edit_task():
+    pass
+
 database = "database.json"
 tasks = load_tasks()
 
@@ -71,5 +74,8 @@ update_task_list()
 
 btn_frame = CTkFrame(frame)
 btn_frame.pack(pady=10)
+
+edit_btn = CTkButton(btn_frame, text="Edit", command=edit_task, width=200)
+edit_btn.grid(row=0, column=0)
 
 window.mainloop()
