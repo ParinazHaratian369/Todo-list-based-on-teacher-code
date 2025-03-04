@@ -1,7 +1,14 @@
-{
+[
     {
-        "text" : "read a book",
-        "status" : "done"
+        "text": "read a book",
+        "status": "default"
+    },
+    {
+        "text": "take a shower",
+        "status": "default"
+    },
+    {
+        "text": "do a hobby",
+        "status": "default"
     }
-}
-
+]

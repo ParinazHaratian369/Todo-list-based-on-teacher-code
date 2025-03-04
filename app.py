@@ -34,7 +34,13 @@ def add_task():
     task_entry.delete(0, END)
 
 def edit_task():
-    pass
+    selected_index = task_listbox.curselection()[0]
+    # print(selected_index)
+    new_task = task_entry.get()
+    tasks[selected_index]["text"] = new_task
+    save_tasks()
+    update_task_list()
+    task_entry.delete(0, END)
 
 database = "database.json"
 tasks = load_tasks()
