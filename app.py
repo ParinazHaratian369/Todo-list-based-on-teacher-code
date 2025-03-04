@@ -33,6 +33,9 @@ def add_task():
     update_task_list()
     task_entry.delete(0, END)
 
+def highlight_task():
+    pass
+
 def clear_tasks():
     global tasks
     tasks = []
@@ -94,12 +97,15 @@ btn_frame = CTkFrame(frame)
 btn_frame.pack(pady=10)
 
 edit_btn = CTkButton(btn_frame, text="Edit", command=edit_task, width=200)
-edit_btn.grid(row=0, column=0)
+edit_btn.grid(row=0, column=0, padx=5, pady=5)
 
 remove_btn = CTkButton(btn_frame, text="Remove", command=remove_task, width=200)
-remove_btn.grid(row=0, column=1)
+remove_btn.grid(row=0, column=1, padx=5)
 
 clear_btn = CTkButton(btn_frame, text="Clear All", command=clear_tasks, width=200)
-clear_btn.grid(row=0, column=2)
+clear_btn.grid(row=0, column=2, padx=5)
+
+highlite_btn = CTkButton(btn_frame, text="Highlight", command=highlight_task, width=200)
+highlite_btn.grid(row=1, column=0, padx=5, pady=5)
 
 window.mainloop()
