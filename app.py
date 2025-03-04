@@ -34,7 +34,10 @@ def add_task():
     task_entry.delete(0, END)
 
 def highlight_task():
-    pass
+    selected_index = task_listbox.curselection()[0]
+    tasks[selected_index]["status"] = "important"
+    save_tasks()
+    update_task_list()
 
 def clear_tasks():
     global tasks

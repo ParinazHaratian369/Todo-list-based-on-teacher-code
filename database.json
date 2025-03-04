@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "text": "read a book",
+        "status": "default"
+    },
+    {
+        "text": "find a solution",
+        "status": "default"
+    },
+    {
+        "text": "say prayer",
+        "status": "important"
+    }
+]
