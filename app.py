@@ -34,7 +34,10 @@ def add_task():
     task_entry.delete(0, END)
 
 def mark_done():
-    pass
+    selected_index = task_listbox.curselection()[0]
+    tasks[selected_index]["status"] = "done"
+    save_tasks()
+    update_task_list()
 
 def highlight_task():
     selected_index = task_listbox.curselection()[0]
