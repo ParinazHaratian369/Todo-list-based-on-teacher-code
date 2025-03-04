@@ -33,6 +33,9 @@ def add_task():
     update_task_list()
     task_entry.delete(0, END)
 
+def mark_done():
+    pass
+
 def highlight_task():
     selected_index = task_listbox.curselection()[0]
     tasks[selected_index]["status"] = "important"
@@ -110,5 +113,8 @@ clear_btn.grid(row=0, column=2, padx=5)
 
 highlite_btn = CTkButton(btn_frame, text="Highlight", command=highlight_task, width=200)
 highlite_btn.grid(row=1, column=0, padx=5, pady=5)
+
+mark_done_btn = CTkButton(btn_frame, text="Mark Done", command=mark_done, width=200)
+mark_done_btn.grid(row=1, column=1, padx=5)
 
 window.mainloop()
