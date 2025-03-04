@@ -34,7 +34,10 @@ def add_task():
     task_entry.delete(0, END)
 
 def reset_task():
-    pass
+    selected_index = task_listbox.curselection()[0]
+    tasks[selected_index]["status"] = "default"
+    save_tasks()
+    update_task_list()
 
 def mark_done():
     selected_index = task_listbox.curselection()[0]
